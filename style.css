@@ -1,3 +1,133 @@
-title {
-    background-color: white;
+* {
+    font-family: sans-serif;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* constraining min and max width */
+@media only screen and (max-width: 900px) {
+    #bg-img {
+        display: none;
+    }
+}
+
+.wrapper, #formwrapper {
+    display: flex;
+}
+
+.wrapper {
+    flex-direction: row;
+}
+
+#textwrapper {
+    flex-direction: column;
+}
+
+#formwrapper {
+    flex-direction: column;
+}
+
+/* https://stackoverflow.com/questions/42486360/align-two-items-left-and-right-when-on-one-line-and-center-when-on-two-lines */
+/* @media(max-width: 768px) {
+    .container {
+      justify-content: space-around;
+    }
+  } */
+.maintext {
+    font-weight: 600;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    padding-right: 20vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.formtext {
+    font-size: 10px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+#formfields {
+    margin-bottom: 40px;
+}
+
+#bg-img {
+    margin-right: 30px;
+    flex-shrink: 1;
+    position: relative;
+}
+
+#logo-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 632px;
+    height: 200px;
+    position: absolute;
+    color: white;
+    font-size: 36px;
+    padding: 25px;
+}
+
+/* styling inputs  */
+/* add width-dependency for mobile layout */
+input {
+    height: 22px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    /* box-shadow: none; */
+}
+
+
+
+/* set not invalid on page start */
+input:invalid {
+    border-color: red;
+}
+
+input:placeholder-shown {
+    border-color: #E5E7EB;
+}
+
+input:active, input:focus {
+    /* border-width: 0; */
+    /* border-color: rgb(136, 167, 134); */
+    border-color: rgb(122, 171, 228);
+    /* box-shadow: black 12px; */
+    box-shadow: initial;
+    outline: none;
+}
+
+
+input[type="submit"] {
+    height: 50px;
+    width: 250px;
+    background-color: #596D48;
+    outline: none;
+    border-radius: 8px;
+    border-color: white;
+    /* box-shadow: ; */
+    color: white;
+}
+
