@@ -1,26 +1,27 @@
 
 /* to-do:
-password matching in javascript **
-odin logo + semi-transparent background
 separate form background
 styling 
-
+redo main text line styling (use margins/padding instead)
 */
 
+function pwdCheck(event) {
+    let pwd1 = document.getElementById('password').value;
+    let pwd2 = document.getElementById('passwordconfirm').value;
 
+    console.log('');
+    console.log("pwd1 = " + pwd1);
+    console.log("pwd2 = " + pwd2);
+    if (Math.abs(pwd1.localeCompare(pwd2))) {
+        console.log('passwords not equal');
+        let pwdError = document.getElementById('pwdError');
+        pwdError.textContent = "Passwords don't match.";
+    }
+    else {
+        pwdError.textContent = "";
+    }
+    event.preventDefault();     // prevent refreshing page
+}
 
-// add event listener for button
-
-// submit = document.getElementById('create');
-let submit = document.getElementsByClassName('submit');
-// console.log("test");
-console.log(submit);
-submit.addEventListener("click", () => console.log("click"));
-
-submit.addEventListener("click", () => {
-pwd1 = document.getElementById('password');
-pwd2 = document.getElementById('passwordconfirm');
-
-console.log("pwd1 = ", + pwd1);
-console.log("pwd2 = ", + pwd2);
-});
+let form = document.getElementById("form");
+form.addEventListener("submit", pwdCheck);

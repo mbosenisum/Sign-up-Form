@@ -1,3 +1,8 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(Norse-Bold.otf);
+}
+
 * {
     font-family: sans-serif;
 }
@@ -5,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(250, 250, 250);
 }
 
 button,
@@ -36,12 +42,25 @@ textarea {
 
 #textwrapper {
     flex-direction: column;
+    /* padding-left: 30px; */
+    /* margin-left: 30px; */
 }
 
 #formwrapper {
     flex-direction: column;
 }
 
+#formfields {
+    box-shadow: 0px 0px 10px;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 40px;
+
+}
+
+#aftershadow {
+    margin-left: 30px;
+}
 /* https://stackoverflow.com/questions/42486360/align-two-items-left-and-right-when-on-one-line-and-center-when-on-two-lines */
 /* @media(max-width: 768px) {
     .container {
@@ -50,9 +69,16 @@ textarea {
   } */
 .maintext {
     font-weight: 600;
+    font-size: larger;
     margin-top: 120px;
     margin-bottom: 20px;
     padding-right: 20vw;
+    margin-left: 30px;
+}
+
+#sidetext {
+    font-size: larger;
+    font-weight: 600;
 }
 
 .row {
@@ -68,24 +94,27 @@ textarea {
     flex-direction: column;
 }
 
-#formfields {
-    margin-bottom: 40px;
-}
-
 #bg-img {
-    margin-right: 30px;
     flex-shrink: 1;
     position: relative;
 }
 
+
 #logo-bg {
+    margin-top: 150px;
     background-color: rgba(0, 0, 0, 0.6);
     width: 632px;
-    height: 200px;
+    height: 100px;
     position: absolute;
     color: white;
     font-size: 36px;
     padding: 25px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: NorseBold;
+    font-size: 64px;
 }
 
 /* styling inputs  */
@@ -93,7 +122,7 @@ textarea {
 input {
     height: 22px;
     border-style: solid;
-    border-color: black;
+    border-color: #E5E7EB;
     border-width: 2px;
     border-radius: 6px;
     /* box-shadow: none; */
@@ -131,3 +160,8 @@ input[type="submit"] {
     color: white;
 }
 
+#pwdError {
+    color: red;
+    margin-top: 10px;
+    
+}

@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="password-check.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <div id="bg-img"><img src="halie-west-25xggax4bSA-unsplash.jpg" alt="green leaf plant in close up photography"
                 height="1024"></div>
-                <div id="logo-bg"><img src="odin-lined.png" alt="odin logo" height="200">Odin</div>       
+        <div id="logo-bg"><img src="odin-lined.png" alt="odin logo" height="100">Odin</div>
 
         <div id="textwrapper">
             <div class="maintext">This is not a real online service! You know you need something like this in your
                 life to help you realize your deepest dreams. <br> Sign up <em>now</em> to get started.
-                <br><br>You <em>know</em> you want to. <br><br><br><br> Let's do this!
+                <br><br>You <em>know</em> you want to. <br><br>
             </div>
 
             <div id="formwrapper">
-                <form>
+                <form id="form">
                     <div id="formfields">
-
+                        <div id="sidetext">Let's do this! <br><br><br></div>
                         <div class="row">
                             <div class="formtext">
                                 <label for="firstname" id="firstname" name="firstname">FIRST NAME</label>
@@ -50,18 +49,21 @@
 
                         <div class="row">
                             <div class="formtext">
-                                <label for="password" id="password" name="password">PASSWORD</label>
+                                <label for="password" id="passwordLabel" name="password">PASSWORD</label>
                                 <input type="password" id="password" name="password" placeholder="***" required>
                             </div>
                             <div class="formtext">
-                                <label for="passwordconfirm" id="passwordconfirm" name="passwordconfirm">CONFIRM
+                                <label for="passwordconfirm" id="passwordConfirmLabel" name="passwordconfirm">CONFIRM
                                     PASSWORD</label>
                                 <input type="password" id="passwordconfirm" name="passwordconfirm" placeholder="***"
                                     required>
                             </div>
                         </div>
+                        <div id="pwdError">Passwords don't match.</div>
+
                     </div>
-                    <!-- style submit button -->
+
+                    <div id="aftershadow">
                     <div>
                         <label for="create" id="create" name="create"></label>
                         <input type="submit" id="create" name="create" class="submit" value="Create Account">
@@ -70,8 +72,11 @@
 
                 <div><br>Already have an account? <strong>Log in</strong></div>
             </div>
+            </div>
         </div>
     </div>
+    <script src="password-check.js"></script>
+
 </body>
 
 </html>
